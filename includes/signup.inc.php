@@ -2,6 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+    $fullname = $_POST["fullname"];
     $username = $_POST["username"];
     $pwd = $_POST["pwd"];
     $email = $_POST["email"];
@@ -41,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             die();
         }
 
-        create_user($pdo, $username, $pwd, $email);
+        create_user($pdo, $fullname, $username, $pwd, $email);
 
         header("Location: ../index.php?signup=success");
 

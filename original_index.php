@@ -24,20 +24,37 @@ require_once 'includes/login_view.inc.php';
         output_username();
         ?>
     </h1>
-    <div class="login-box">
-     <h1>Login</h1>
-     <form action="includes/login.inc.php" method="post">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="pwd" placeholder="Password">
-        <input type="submit" value="Login" />
-    </form>
+    <?php
+    if(!isset($_SESSION["user_id"])){?>
+        <div class="login-box">
+    	<h1>Login</h1>
+    	<form action="includes/login.inc.php" method="post">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="pwd" placeholder="Password">
+        <button>Login</button>
+        </form>
+    <?php
+    }
+    ?>
     <?php
     check_login_errors();
     ?>
-    <p class="para-2">
-          Not have an account? <a href="signup.php">Sign Up Here</a>
-        </p>
-    
+
+
+    <div class="signup-box">
+    	<h1>Sign Up</h1>
+    	<h4>It's free and on    ly takes a minute</h4>
+    	<form action="includes/signup.inc.php" method="post">
+            <?php
+            signup_input()
+            ?>
+        <button>Signup</button>
+        </form>
+
+    <?php
+    check_signup_errors();
+    ?>
+
     <?php
     if(isset($_SESSION["user_id"])){?>
         <div class="logout-box">
@@ -49,7 +66,7 @@ require_once 'includes/login_view.inc.php';
     }
     ?>
 
-
+   
 
 </body>
 </html>
