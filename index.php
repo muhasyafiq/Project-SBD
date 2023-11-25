@@ -19,6 +19,8 @@ require_once 'includes/login_view.inc.php';
 </head>
 
 <body>
+<!-- Navbar -->
+<!-- End of Navbar -->
 
     <h1>
         <?php
