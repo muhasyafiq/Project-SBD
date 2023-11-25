@@ -10,7 +10,8 @@ require_once 'includes/login_view.inc.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Front Page</title>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
@@ -19,9 +20,6 @@ require_once 'includes/login_view.inc.php';
 </head>
 
 <body>
-<!-- Navbar -->
-<!-- End of Navbar -->
-
     <h1>
         <?php
         output_username();
@@ -44,7 +42,6 @@ require_once 'includes/login_view.inc.php';
     <?php
     if(isset($_SESSION["user_id"])){?>
     <div class="logout-box">
-    	<h1>Logout</h1>
     	<form action="includes/logout.inc.php" method="post">
         <input type="submit" value="Logout" />
         </form>
