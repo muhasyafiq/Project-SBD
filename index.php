@@ -4,7 +4,7 @@ require_once 'includes/signup_view.inc.php';
 require_once 'includes/login_view.inc.php';
 ?>
 
-<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,7 @@ require_once 'includes/login_view.inc.php';
     <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
     rel="stylesheet"/>
+    <span style="font-family: verdana, geneva, sans-serif;">
 </head>
 
 <body>
@@ -34,20 +35,22 @@ require_once 'includes/login_view.inc.php';
     <?php
     check_login_errors();
     ?>
-    <p class="para-2">
+    <p class="bottom">
           Not have an account? <a href="signup.php">Sign Up Here</a>
         </p>
-    
+    </div>
     <?php
     if(isset($_SESSION["user_id"])){?>
-        <div class="logout-box">
+    <div class="logout-box">
     	<h1>Logout</h1>
     	<form action="includes/logout.inc.php" method="post">
-        <button>Logout</button>
+        <input type="submit" value="Logout" />
         </form>
+    </div>
     <?php
     }
     ?>
+    
 
 
 
