@@ -2,7 +2,11 @@
 require_once 'includes/config_session.inc.php';
 require_once 'includes/signup_view.inc.php';
 require_once 'includes/login_view.inc.php';
-?>
+
+if(isset($_SESSION["user_id"])){
+    header("location: dashboard.php");
+        exit;
+}?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +17,9 @@ require_once 'includes/login_view.inc.php';
     <title>Login Page</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-    rel="stylesheet"/>
-    <span style="font-family: verdana, geneva, sans-serif;">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -39,16 +42,6 @@ require_once 'includes/login_view.inc.php';
           Not have an account? <a href="signup.php">Sign Up Here</a>
         </p>
     </div>
-    <?php
-    if(isset($_SESSION["user_id"])){?>
-    <div class="logout-box">
-    	<form action="includes/logout.inc.php" method="post">
-        <input type="submit" value="Logout" />
-        </form>
-    </div>
-    <?php
-    }
-    ?>
     
 
 

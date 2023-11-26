@@ -38,7 +38,7 @@ header("location: index.php");
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">Team</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">Testimonials</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="5">Faq</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="6">Order</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="order.php">Order</a> </li>
       </ul>
     </div>
   </div>
