@@ -4,8 +4,9 @@ require_once 'includes/signup_view.inc.php';
 require_once 'includes/login_view.inc.php';
 
 if(isset($_SESSION["user_id"])){
+    $userId = $_SESSION["user_id"];
     header("location: dashboard.php");
-        exit;
+    exit;
 }?>
 
 <!DOCTYPE html>

@@ -4,8 +4,9 @@ session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["user_id"])){
-header("location: index.php");
-    exit;
+  $userId = $_SESSION["user_id"];
+  header("location: index.php");
+  exit;
 }
 ?>
 
@@ -27,23 +28,7 @@ header("location: index.php");
 </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
-  <div class="container"> <a class="navbar-brand navbar-logo" href="#"> <img src="img/logo.png" alt="logo" class="logo-1"> </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span> </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">Home</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">About</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Features</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">Team</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">Testimonials</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="5">Faq</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="order.php">Order</a> </li>
-      </ul>
-    </div>
-  </div>
-</nav>
- 
+ <?php include("includes/navbar.php"); ?>
 <!-- End of Navbar -->
 <!-- Banner Start -->
 <section class="banner" data-scroll-index='0'>
@@ -111,19 +96,7 @@ header("location: index.php");
 
 <!-- End of Team -->
 <!-- Footer -->
-  <footer class="footer-copy">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="logout">
-          <a><form action="includes/logout.inc.php" method="post">
-            <input type="image" src="img/logout.png" alt="Logout" style="width: 30px" />
-          </form></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+<?php include("includes/footer.php"); ?>
 <!-- End of Footer -->
 <!-- Script -->
 

@@ -2,8 +2,9 @@
 session_start();
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["user_id"])){
-header("location: index.php");
-    exit;
+  $userId = $_SESSION["user_id"];
+  header("location: index.php");
+  exit;
 }
 ?>
 <!DOCTYPE html>
@@ -20,6 +21,16 @@ header("location: index.php");
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+	<div class="login-box">
+    <h1>Order</h1>
+    <form action="includes/order.inc.php" method="post">
+      <input type="text" name="username" placeholder="Username">
+      <input type="text" name="package_name" placeholder="Package Name">
+      <input type="text" name="package_type" placeholder="Package Type">
+			<input type="text" name="amount" placeholder="Amount">
+			<input type="text" name="note" placeholder="Note">
+      <input type="submit" value="Place order" />
+    </form>
+	</div>
 </body>
 </html>

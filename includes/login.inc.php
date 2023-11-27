@@ -1,5 +1,4 @@
 <?php
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $username = $_POST["username"];
@@ -10,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         require_once "login_model.inc.php";
         require_once "login_contr.inc.php";
 
+        
        //ERROR HANDLERS
        $errors =[];
 
@@ -17,6 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
            $errors["empty_input"] = 'Fill in all fields!';
         }
         $results = get_user($pdo,$username);
+
+        if (empty($results)) {
+            $errors["login_incorrect"] = 'Incorrect login info!';
+        }
 
         if (is_username_wrong($results)){
             $errors["login_incorrect"] = 'Incorrent login info!';
@@ -36,7 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
            header("Location: ../index.php");
            die();
        }
-
+      $customer_id = get_id($pdo, $username, $pwd);
+			$_SESSION['user_id'] = $customer_id;
 
        $newSessionId = session_create_id();
        $sessionId = $newSessionId . "_" . $results["id"];
