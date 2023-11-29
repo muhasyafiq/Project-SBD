@@ -19,10 +19,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (Is_Order_Empty($package_name,$package_type,$amount)){
             $errors["empty_input"] = 'Fill in all fields!';
         }
+
+        require_once 'config_session.inc.php';
+
+        if ($errors ){
+            $_SESSION["error_order"] = $errors;
+            header("Location: ../order.php");
+            die();
+        }
+
         $user_id = $_SESSION['user_id'];
         create_order($pdo, $package_name, $package_type, $amount, $user_id, $note);
 
         header("Location: ../dashboard.php");
+
         $pdo = null;
         $stmt = null;
         die();

@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once 'includes/order_view.inc.php';
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["user_id"])){
   $userId = $_SESSION["user_id"];
@@ -38,7 +39,9 @@ if(!isset($_SESSION["user_id"])){
 					
 					<div class="overlay-right">
 						<h1>Place your custom oder</h1>
-						<p>Please fill the entire form.</p>
+						<?php
+						check_order_errors();
+						?>
 					</div>
 			</div>
 	</div>
