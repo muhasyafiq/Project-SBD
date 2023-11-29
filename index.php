@@ -32,18 +32,18 @@ if(isset($_SESSION["user_id"])){
 				</div>
 				<div class="input-group">
 					<?php
-            signup_input()
+            signup_input();
           ?>
 					<button>Sign Up</button>
 				</div>
       </form>
-			<?php
-    		check_signup_errors();
-    	?>
-			</div>
+	</div>
 			<div class="sign-in-wrapper">
 				<form action="includes/login.inc.php" method="post">
 					<h1>Sign In</h1>
+					<?php
+   					check_login_errors();
+    				?>
 						<div class="social">
 							<div><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
 							<div><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div>
@@ -56,9 +56,6 @@ if(isset($_SESSION["user_id"])){
 							<button>Sign In</button>
 						</div>
 				</form>
-				<?php
-   					check_login_errors();
-    			?>
 			</div>
 			<div class="overlay">
 					<div class="overlay-left">
@@ -69,6 +66,9 @@ if(isset($_SESSION["user_id"])){
 					<div class="overlay-right">
 						<h1>Hello, Friend</h1>
 						<p>Enter your personal details and start journey with us.</p>
+						<?php
+    						check_signup_errors();
+    					?>
 						<button id="signup" class="overlay-btn">Sign up</button>
 					</div>
 			</div>

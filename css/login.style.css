@@ -46,6 +46,10 @@ form {
     align-items: center;
 }
 
+p.form-error {
+    color: #fff;
+}
+
 .social {
     margin: 16px 0;
 }
