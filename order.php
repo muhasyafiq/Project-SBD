@@ -35,11 +35,7 @@ if(!isset($_SESSION["user_id"])){
 				</form>
 			</div>
 			<div class="overlay">
-					<div class="overlay-left">
-						<h1>Welcome Back</h1>
-						<p>To keep connected with us please login with your personal info.</p>
-						<button id="signin" class="overlay-btn">Sign in</button>
-					</div>
+					
 					<div class="overlay-right">
 						<h1>Place your custom oder</h1>
 						<p>Please fill the entire form.</p>
