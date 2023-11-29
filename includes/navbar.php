@@ -30,4 +30,14 @@
   button:hover {
     color: #5f0099;
   }
+
+  .nav-scroll button {
+    color: #333;
+  }
+
+  .nav-scroll button:hover {
+    color: #5f0099;
+  }
+
+
 </style>
