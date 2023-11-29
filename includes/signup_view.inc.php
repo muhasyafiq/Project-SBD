@@ -13,8 +13,6 @@ function signup_input(){
         echo '<input type="text" name="username" placeholder="Username">';
     }
 
-    echo '<input type="password" name="pwd" placeholder="Password">';
-
     if (isset($_SESSION["signup_data"]["email"]) && 
     !isset($_SESSION["errors_signup"]["email_used"])&& 
     !isset($_SESSION["errors_signup"]["invalid_email"])){
@@ -23,6 +21,7 @@ function signup_input(){
     } else {
         echo '<input type="text" name="email" placeholder="E-mail">';
     }
+    echo '<input type="password" name="pwd" placeholder="Password">';
 }
 
 function check_signup_errors(){

@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $package_name = $_POST["package_name"];
     $package_type = $_POST["package_type"];
     $amount = $_POST["amount"];
-    $note = $_POST["amount"];
+    $note = $_POST["note"];
     
     try {
         require_once 'dbh.inc.php';
