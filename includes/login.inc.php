@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
            $_SESSION["errors_login"] = $errors;
 
            
-           header("Location: ../index.php");
+           header("Location: ../login.php");
            die();
        }
       $customer_id = get_id($pdo, $username, $pwd);
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
        $_SESSION["user_username"] = htmlspecialchars($results["username"]);
        $_SESSION['last_regeneration'] = time();
 
-       header("Location: ../dashboard.php");
+       header("Location: ../index.php");
        $pdo = null;
        $stmt = null;
        die();
