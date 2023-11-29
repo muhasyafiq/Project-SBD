@@ -6,7 +6,28 @@
         <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">Home</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">Team</a> </li>
         <li class="nav-item"> <a class="nav-link" href="order.php">Order</a> </li>
-      </ul>
+        <a><form action="includes/logout.inc.php" method="post">
+          <button>Logout</button>
+          </form></a> 
+      </ul> 
     </div>
   </div>
 </nav>
+
+
+<style>
+  button {
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    position: fixed;
+    top: 13px;
+  }
+
+  button:hover {
+    color: #5f0099;
+  }
+</style>
