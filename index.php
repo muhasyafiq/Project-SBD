@@ -22,7 +22,7 @@ if(isset($_SESSION["user_id"])){
 </head>
 <body>
 	<div class="container">
-  	<div class="sign-up-wrapper">
+  		<div class="sign-up-wrapper">
       <form action="includes/signup.inc.php" method="post">
         <h1>Create Account</h1>
 				<div class="social">
@@ -37,8 +37,8 @@ if(isset($_SESSION["user_id"])){
 					<button>Sign Up</button>
 				</div>
       </form>
-	</div>
-			<div class="sign-in-wrapper">
+		</div>
+		<div class="sign-in-wrapper">
 				<form action="includes/login.inc.php" method="post">
 					<h1>Sign In</h1>
 					<?php
@@ -56,8 +56,8 @@ if(isset($_SESSION["user_id"])){
 							<button>Sign In</button>
 						</div>
 				</form>
-			</div>
-			<div class="overlay">
+		</div>
+		<div class="overlay">
 					<div class="overlay-left">
 						<h1>Welcome Back</h1>
 						<p>To keep connected with us please login with your personal info.</p>
@@ -71,7 +71,7 @@ if(isset($_SESSION["user_id"])){
     					?>
 						<button id="signup" class="overlay-btn">Sign up</button>
 					</div>
-			</div>
+		</div>
 	</div>
 
 	<script src="js/main.js"></script>

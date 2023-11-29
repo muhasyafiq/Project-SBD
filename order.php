@@ -21,6 +21,7 @@ if(!isset($_SESSION["user_id"])){
     <title>Order</title>
 </head>
 <body>
+
 	<div class="container">
 		<div class="sign-in-wrapper">
 			<form action="includes/order.inc.php" method="post">
@@ -42,6 +43,7 @@ if(!isset($_SESSION["user_id"])){
 						<?php
 						check_order_errors();
 						?>
+						<button id="home" class="overlay-btn" onclick="window.location.href='dashboard.php';">Home</button>
 					</div>
 			</div>
 	</div>
