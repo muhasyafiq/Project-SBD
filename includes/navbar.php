@@ -5,10 +5,15 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">Home</a> </li>
         <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">Team</a> </li>
+        <?php
+        if(isset($_SESSION["user_id"])){$userId = $_SESSION["user_id"];?>
         <li class="nav-item"> <a class="nav-link" href="order.php">Order</a> </li>
         <a><form action="includes/logout.inc.php" method="post">
-          <button>Logout</button>
-          </form></a> 
+          <button>Logout</button></form></a> 
+        <?php } 
+        else {?>
+          <li class="nav-item"> <a class="nav-link" href="login.php">Login</a> </li>
+        <?php } ?>
       </ul> 
     </div>
   </div>

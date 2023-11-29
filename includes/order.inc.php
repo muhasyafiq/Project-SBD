@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $user_id = $_SESSION['user_id'];
         create_order($pdo, $package_name, $package_type, $amount, $user_id, $note);
 
-        header("Location: ../dashboard.php");
+        header("Location: ../order.php");
 
         $pdo = null;
         $stmt = null;

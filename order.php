@@ -43,7 +43,7 @@ if(!isset($_SESSION["user_id"])){
 						<?php
 						check_order_errors();
 						?>
-						<button id="home" class="overlay-btn" onclick="window.location.href='dashboard.php';">Home</button>
+						<button id="home" class="overlay-btn" onclick="window.location.href='index.php';">Home</button>
 					</div>
 			</div>
 	</div>
