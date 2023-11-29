@@ -65,7 +65,7 @@ if(!isset($_SESSION["user_id"])){
         <div class="sectioner-header text-center">
           <h3>Our Team</h3>
           <span class="line"></span>
-          <p>Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra ante.</p>
+          <p>Para Pecandu Gacha</p>
         </div>
         <div class="section-content text-center">
           <div class="row">
