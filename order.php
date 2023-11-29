@@ -33,20 +33,12 @@ if(!isset($_SESSION["user_id"])){
 					    <button>Place Order</button>
 				    </div>
 				</form>
-				<?php
-   					check_login_errors();
-    			?>
 			</div>
 			<div class="overlay">
-					<div class="overlay-left">
-						<h1>Welcome Back</h1>
-						<p>To keep connected with us please login with your personal info.</p>
-						<button id="signin" class="overlay-btn">Sign in</button>
-					</div>
+					
 					<div class="overlay-right">
-						<h1>Hello, Friend</h1>
-						<p>Enter your personal details and start journey with us.</p>
-						<button id="signup" class="overlay-btn">Sign up</button>
+						<h1>Place your custom oder</h1>
+						<p>Please fill the entire form.</p>
 					</div>
 			</div>
 	</div>
