@@ -38,8 +38,8 @@ if(!isset($_SESSION["user_id"])){
         <div class="col-md-8 col-sm-12">
           <div class="banner-text">
             <h2 class="white">RadiantSafe</h2>
-            <h6 class="white">Know the composition of your food STARTING NOW!</h6>
-            <p class="banner-text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit neque massa, sit amet tristique ante porta ut. In sodales et justo vel vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <h6 class="white">Radiation that's secure, brilliance in every venture.</h6>
+            <p class="banner-text white">The leading irradiation facility dedicated to safety and sustainability. Explore the latest information, premium services, and innovative solutions here to ensure the secure and effective use of irradiation.</p>
             <ul>
               <li><a href="#"><img src="img/appstore.png" class="wow fadeInUp" data-wow-delay="0.4s"/></a></li>
               <li><a href="#"><img src="img/playstore.png" class="wow fadeInUp" data-wow-delay="0.7s"/></a></li>
